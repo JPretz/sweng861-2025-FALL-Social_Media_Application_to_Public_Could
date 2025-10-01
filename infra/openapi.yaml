@@ -1,0 +1,19 @@
+openapi: 3.0.0
+info:
+  title: backend-api
+  version: 1.0.0
+paths:
+  /api/{path+}:
+    x-google-backend:
+      address: https://BACKEND_CLOUD_RUN_URL
+      protocol: h2
+    get:
+      summary: Proxy GET
+      responses:
+        "200":
+          description: OK
+    post:
+      summary: Proxy POST
+      responses:
+        "200":
+          description: OK
